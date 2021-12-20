@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing the app testing HomePage UI 1`] = `
+"<div class=\\"App\\">
+  <div class=\\"home\\">
+    <div class=\\"standing-page-header home-page-header d-flex j-center a-center\\">
+      <div>
+        <h2>Steve's Football App</h2>
+      </div>
+      <div class=\\"d-flex j-center a-center season-select\\">
+        <p>Leagues Displayed:0</p>
+      </div>
+    </div><input type=\\"text\\" class=\\"search\\" placeholder=\\"search league\\" value=\\"\\">
+    <div class=\\"home-page d-flex j-center a-center\\"></div>
+  </div>
+</div>"
+`;

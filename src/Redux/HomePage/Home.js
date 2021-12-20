@@ -3,7 +3,7 @@ const SEARCH_LEAGUES = 'store/home/SEARCH_LEAGUES';
 const LOAD_LEAGUE = 'store/home/LOAD_LEAGUES';
 const initialState = [];
 
-const fetchLeagues = (leagues) => ({
+export const fetchLeagues = (leagues) => ({
   type: FETCH_LEAGUES,
   payload: leagues,
 });
