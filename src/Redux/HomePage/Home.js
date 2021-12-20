@@ -1,10 +1,7 @@
 const FETCH_LEAGUES = 'store/home/FETCH_LEAGUES';
 const SEARCH_LEAGUES = 'store/home/SEARCH_LEAGUES';
-const LOAD_LEAGUE = 'store/home/SEARCH_LEAGUES';
-const initialState = {
-  standingPage: [],
-  homePage: [],
-};
+const LOAD_LEAGUE = 'store/home/LOAD_LEAGUES';
+const initialState = [];
 
 const fetchLeagues = (leagues) => ({
   type: FETCH_LEAGUES,
@@ -30,24 +27,27 @@ export const getLeagues = () => async (dispatch) => {
 const homeReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_LEAGUES:
-      return {
-        ...state,
-        homePage: action.payload.map((league) => (
-          {
-            leagueName: league.name,
-            leagueLogo: league.logos.light,
-            id: league.id,
-            leagueAbbr: league.abbr,
-          }
-        )),
-      };
-    // case SEARCH_LEAGUES:
-    //   return state.filter((league) => league.leagueName.contains(action.payload));
+      return action.payload.map((league) => (
+        {
+          leagueName: league.name,
+          leagueLogo: league.logos.light,
+          id: league.id,
+          leagueAbbr: league.abbr,
+          selected: false,
+        }
+      ));
+    case SEARCH_LEAGUES:
+      return state.filter((league) => league.leagueName.toLowerCase().includes(action.payload));
     case LOAD_LEAGUE:
-      return {
-        ...state,
-        standingPage: state.homePage.filter((league) => league.id === action.payload),
-      };
+      return state.map((league) => {
+        if (league.id === action.payload) {
+          return {
+            ...league,
+            selected: true,
+          };
+        }
+        return league;
+      });
     default:
       return state;
   }

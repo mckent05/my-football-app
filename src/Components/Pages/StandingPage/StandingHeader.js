@@ -8,7 +8,6 @@ const StandingHeader = ({ id, year }) => {
     <div className="standing-page-header d-flex j-center a-center">
       <div>
         <h2>Steve&apos;s Football App</h2>
-        <img src="" alt="" />
       </div>
       <div className="d-flex j-center a-center season-select">
         <p>Please select season:</p>

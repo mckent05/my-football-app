@@ -5,10 +5,11 @@ import { FaArrowCircleLeft } from 'react-icons/fa';
 import { getStanding, getStandingByYear } from '../../../Redux/StandingPage/Standing';
 import StandingDetails from './StandingDetails';
 import StandingHeader from './StandingHeader';
+import { getLeagues } from '../../../Redux/HomePage/Home';
 
 const StandingPage = () => {
   let league = useSelector((state) => state.home);
-  league = league.standingPage;
+  league = league.filter((league) => league.selected === true);
   const { id, leagueLogo } = league[0];
 
   const myStanding = useSelector((state) => state.standing);
@@ -18,13 +19,15 @@ const StandingPage = () => {
   const dispatch = useDispatch();
   const changeYear = (id, number) => dispatch(getStandingByYear(id, number));
 
+  const loadLeague = () => dispatch(getLeagues());
+
   useEffect(() => {
     dispatch(getStanding(id));
   }, []);
   return (
     <div className="standing-page d-flex j-center a-center f-col">
       <StandingHeader year={changeYear} id={id} />
-      <Link className="standing-link d-flex" to="/"><FaArrowCircleLeft /></Link>
+      <Link className="standing-link d-flex" to="/" onClick={loadLeague}><FaArrowCircleLeft /></Link>
       <div className="standing-header d-flex a-center j-center">
         <h2>{leagueName}</h2>
         <img src={leagueLogo} alt="logo" />

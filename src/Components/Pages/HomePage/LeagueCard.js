@@ -11,6 +11,7 @@ const LeagueCard = ({
   const dispatch = useDispatch();
 
   const loadStanding = (id) => dispatch(loadLeague(id));
+
   return (
     <article className="league-card d-flex a-center j-center">
       <Link to={`/StandingPage/${name}`} onClick={() => loadStanding(id)}>
