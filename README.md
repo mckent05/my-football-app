@@ -15,7 +15,7 @@ Standing page view                       |  Standing Page View
 > Click [here](http://steven-football-app.herokuapp.com/) to see the live preview of the project.
 
 ## Watch Live Presentation
-> > Click [here]('') to see a live presentation of the project.
+> Click [here]('') to see a live presentation of the project.
 
 ### Built With
 
