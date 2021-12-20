@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.f-col {
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.home-page {
+  flex-wrap: wrap;
+  row-gap: 50px;
+  column-gap: 40px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.home {
+  width: 100%;
+  height: 330vh;
+  background: url('./homebackg.jpg') center/cover no-repeat;
+}
+
+.search {
+  margin-top: 70px;
+  left: 5%;
+  width: 50%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 4px;
+  border: none;
+}
+
+.league-card {
+  width: 20%;
+  row-gap: 30px;
+  height: 50vh;
+  padding: 0 15px;
+  box-shadow: 0 4px 6px black;
+  border-radius: 4px;
+  background-color: #e8e8e8;
+}
+
+.league-card:hover {
+  transform: scale(1.1);
+}
+
+.league-card img {
+  width: 100px;
+  margin-top: 50px;
+}
+
+.card-header {
+  column-gap: 10px;
+}
+
+.card-header button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transform: scale(1.5);
+}
+
+.standing-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: url('../StandingPage/standbackg.jpg') center/cover no-repeat;
+}
+
+.table {
+  border: 1px solid #e8e8e8;
+  width: 90%;
+  padding: 10px;
+  box-shadow: 0 4px 4px black;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 50px;
+  background-color: rgb(73, 167, 207);
+}
+
+.table .t-row {
+  background-color: ghostwhite;
+  padding: 20px;
+}
+
+.table .t-row:nth-of-type(even) {
+  background-color: rgb(192, 192, 192);
+}
+
+.table td {
+  padding: 5px;
+}
+
+.standing-header {
+  width: 90%;
+  justify-content: space-around;
+  margin: 20px auto 10px auto;
+}
+
+.standing-header img {
+  width: 50px;
+}
+
+.standing-header p {
+  font-size: 20px;
+}
+
+.standing-page-header {
+  background-color: rgb(93, 138, 156);
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  padding: 12px 20px;
+  top: 0;
+  justify-content: space-between;
+}
+
+.standing-page-header h2 {
+  font-size: 24px;
+  font-family: cursive;
+  color: white;
+}
+
+.standing-page-header p {
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.season-select {
+  column-gap: 20px;
+  margin-right: 40px;
+}
+
+.season-select select {
+  width: 100px;
+  padding: 7px;
+  background-color: transparent;
+  font-weight: 400;
+}
+
+option {
+  padding: 7px;
+}
+
+.standing-link {
+  margin: 100px 0 0 50px;
+  align-self: flex-start;
+  justify-self: flex-start;
+  transform: scale(2.5);
+  color: #e8e8e8;
+}
