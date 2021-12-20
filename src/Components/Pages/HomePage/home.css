@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -81,7 +81,7 @@ a {
 .standing-page {
   width: 100%;
   min-height: 100vh;
-  margin: 0 auto ;
+  margin: 0 auto;
   background: url('../StandingPage/standbackg.jpg') center/cover no-repeat;
 }
 
@@ -154,12 +154,13 @@ a {
   width: 100px;
   padding: 7px;
   background-color: transparent;
-  font-weight: 400
+  font-weight: 400;
 }
 
 option {
   padding: 7px;
 }
+
 .standing-link {
   margin: 100px 0 0 50px;
   align-self: flex-start;
