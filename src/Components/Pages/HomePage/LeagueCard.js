@@ -1,20 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { FaArrowCircleRight } from 'react-icons/fa';
-import { loadLeague } from '../../../Redux/HomePage/Home';
 
 const LeagueCard = ({
   name, logo, id,
 }) => {
-  const dispatch = useDispatch();
-
-  const loadStanding = (id) => dispatch(loadLeague(id));
-
+  const loadStanding = (id, logo) => {
+    localStorage.setItem('linkId', id);
+    localStorage.setItem('linkLogo', logo);
+  };
   return (
     <article className="league-card d-flex a-center j-center">
-      <Link to={`/StandingPage/${name}`} onClick={() => loadStanding(id)}>
+      <Link to={`/StandingPage/${name}`} onClick={() => loadStanding(id, logo)}>
         <div className="card-header d-flex j-center a-center">
           <h1>
             {name}

@@ -1,16 +1,10 @@
 const FETCH_LEAGUES = 'store/home/FETCH_LEAGUES';
 const SEARCH_LEAGUES = 'store/home/SEARCH_LEAGUES';
-const LOAD_LEAGUE = 'store/home/LOAD_LEAGUES';
 const initialState = [];
 
 export const fetchLeagues = (leagues) => ({
   type: FETCH_LEAGUES,
   payload: leagues,
-});
-
-export const loadLeague = (league) => ({
-  type: LOAD_LEAGUE,
-  payload: league,
 });
 
 export const searchLeagues = (leagueName) => ({
@@ -38,16 +32,6 @@ const homeReducer = (state = initialState, action) => {
       ));
     case SEARCH_LEAGUES:
       return state.filter((league) => league.leagueName.toLowerCase().includes(action.payload));
-    case LOAD_LEAGUE:
-      return state.map((league) => {
-        if (league.id === action.payload) {
-          return {
-            ...league,
-            selected: true,
-          };
-        }
-        return league;
-      });
     default:
       return state;
   }

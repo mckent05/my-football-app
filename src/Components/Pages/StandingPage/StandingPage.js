@@ -8,9 +8,8 @@ import StandingHeader from './StandingHeader';
 import { getLeagues } from '../../../Redux/HomePage/Home';
 
 const StandingPage = () => {
-  let league = useSelector((state) => state.home);
-  league = league.filter((league) => league.selected === true);
-  const { id, leagueLogo } = league[0];
+  const id = localStorage.getItem('linkId');
+  const logo = localStorage.getItem('linkLogo');
 
   const myStanding = useSelector((state) => state.standing);
 
@@ -30,7 +29,7 @@ const StandingPage = () => {
       <Link className="standing-link d-flex" to="/" onClick={loadLeague}><FaArrowCircleLeft /></Link>
       <div className="standing-header d-flex a-center j-center">
         <h2>{leagueName}</h2>
-        <img src={leagueLogo} alt="logo" />
+        <img src={logo} alt="logo" />
         <p>
           League Season:
           {season}
