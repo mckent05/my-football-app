@@ -6,13 +6,12 @@ import { FaArrowCircleRight } from 'react-icons/fa';
 const LeagueCard = ({
   name, logo, id,
 }) => {
-  const loadStanding = (id, logo) => {
-    localStorage.setItem('linkId', id);
+  const loadStanding = (logo) => {
     localStorage.setItem('linkLogo', logo);
   };
   return (
     <article className="league-card d-flex a-center j-center">
-      <Link to={`/StandingPage/${name}`} onClick={() => loadStanding(id, logo)}>
+      <Link to={`/StandingPage/${id}`} onClick={() => loadStanding(logo)}>
         <div className="card-header d-flex j-center a-center">
           <h1>
             {name}
