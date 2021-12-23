@@ -6,6 +6,7 @@ import { FaArrowCircleLeft } from 'react-icons/fa';
 import { getStanding, getStandingByYear } from '../../../Redux/StandingPage/Standing';
 import StandingDetails from './StandingDetails';
 import StandingHeader from './StandingHeader';
+import { getLeagues } from '../../../Redux/HomePage/Home';
 
 const StandingPage = () => {
   const logo = localStorage.getItem('linkLogo');
