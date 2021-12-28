@@ -46,8 +46,8 @@ const StandingPage = () => {
             <th>Loss</th>
             <th>Draws</th>
             <th>Games</th>
-            <th>GF</th>
-            <th>GA</th>
+            <th className="gf">GF</th>
+            <th className="gf">GA</th>
             <th>points</th>
             <th>rank</th>
             <th>GD</th>
