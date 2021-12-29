@@ -171,7 +171,7 @@ option {
   color: #e8e8e8;
 }
 
-@media screen and (max-width: 776px) {
+@media screen and (max-width: 920px) {
  .search {
    margin-top: 120px;
  }
@@ -187,9 +187,23 @@ option {
 
  .league-card {
    width: 48%;
-   height: 47vh;
-   padding: 10px;
+   padding: 0;
    row-gap: 15px;
+ }
+
+ .card-header h1 {
+   width: 100%;
+   margin-top: 20px;
+ }
+
+ .card-header {
+  flex-direction: column;
+  row-gap: 15px;
+  margin-top: 50px;
+ }
+
+ .league-card img {
+   margin: 5px 0 70px 0;
  }
 
  .app-name {
