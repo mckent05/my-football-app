@@ -242,6 +242,10 @@ option {
     padding: 0;
   }
 
+  thead th {
+    width: 5%;
+  }
+
   .table td {
     width: 5px;
     padding: 2px;
@@ -267,13 +271,5 @@ option {
 
   .t-head {
     width: 20vw;
-  }
-
-  thead th {
-    width: 5%;
-  }
-
-  .table .t-row {
-    padding: 0;
   }
 }
