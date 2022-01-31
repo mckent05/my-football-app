@@ -36,7 +36,7 @@ a {
 .home {
   width: 100%;
   height: 330vh;
-  background: url('./homebackg.jpg') center/cover no-repeat;
+  background: url("./homebackg.jpg") center/cover no-repeat;
 }
 
 .search {
@@ -83,7 +83,7 @@ a {
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
-  background: url('../StandingPage/standbackg.jpg') center/cover no-repeat;
+  background: url("../StandingPage/standbackg.jpg") center/cover no-repeat;
 }
 
 .table {
@@ -169,4 +169,107 @@ option {
   justify-self: flex-start;
   transform: scale(2.5);
   color: #e8e8e8;
+}
+
+@media screen and (max-width: 920px) {
+  .search {
+    margin-top: 120px;
+  }
+
+  .home {
+    height: auto;
+  }
+
+  .home-page {
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+
+  .league-card {
+    width: 48%;
+    padding: 0;
+    row-gap: 15px;
+  }
+
+  .card-header h1 {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .card-header {
+    flex-direction: column;
+    row-gap: 15px;
+    margin-top: 50px;
+  }
+
+  .league-card img {
+    margin: 5px 0 70px 0;
+  }
+
+  .app-name {
+    width: 100%;
+  }
+
+  .home-page-header {
+    padding: 8px;
+  }
+
+  .home-page-header h2 {
+    width: 80%;
+  }
+
+  .standing-page-header {
+    padding: 5px;
+    justify-content: space-between;
+  }
+
+  .standing-page-header h2 {
+    width: 100%;
+  }
+
+  .standing-page {
+    width: 110vw;
+    padding: 5px;
+    height: 100%;
+  }
+
+  .table {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .table .t-row {
+    padding: 0;
+  }
+
+  thead th {
+    width: 5%;
+  }
+
+  .table td {
+    width: 5px;
+    padding: 2px;
+    text-transform: capitalize;
+  }
+
+  .table th {
+    font-size: 13px;
+    text-transform: capitalize;
+  }
+
+  .table td:nth-child(7) {
+    display: none;
+  }
+
+  .table td:nth-child(8) {
+    display: none;
+  }
+
+  .gf {
+    display: none;
+  }
+
+  .t-head {
+    width: 20vw;
+  }
 }
